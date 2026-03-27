@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Chat</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+<h2>Chat with {{ user }}</h2>
+
+<div class="top-right">
+<a href="/dashboard" class="logout-btn">Back</a>
+</div>
+
+</div>
+
+
+<div class="container">
+
+<div class="box">
+
+<h3>Conversation</h3>
+
+{% for msg in messages %}
+
+<div class="chat-box">
+
+<b>{{ msg[1] }}</b> : {{ msg[3] }}
+
+</div>
+
+{% endfor %}
+
+</div>
+
+
+<div class="box">
+
+<form method="POST">
+
+<input type="text" name="message" placeholder="Type message" required>
+
+<button type="submit">Send</button>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+</html>

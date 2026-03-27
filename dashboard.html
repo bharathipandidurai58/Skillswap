@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Skill Connect</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+<h2>Skill Connect</h2>
+
+<div class="top-right">
+👤 {{ session['username'] }}
+<a href="/logout" class="logout-btn">Logout</a>
+</div>
+
+</div>
+
+
+<div class="container">
+
+
+<!-- Add Skill -->
+
+<div class="box">
+
+<h2>Add Skill</h2>
+
+<form method="POST">
+
+<input type="text" name="skill" required>
+<button>Add</button>
+
+</form>
+
+</div>
+
+
+<!-- My Skills -->
+
+<div class="box">
+
+<h2>My Skills</h2>
+
+{% for skill in my_skills %}
+
+<div class="skill-box">
+
+{{ skill[2] }}
+
+<a href="/delete_skill/{{ skill[0] }}" class="delete-btn">
+Delete
+</a>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+
+<!-- Available Skills -->
+
+<div class="box">
+
+<h2>Available Users</h2>
+
+{% for skill in skills %}
+
+<div class="skill-box">
+
+{{ skill[1] }} - {{ skill[2] }}
+
+<a href="/request/{{ skill[1] }}/{{ skill[2] }}" class="swap-btn">
+Request
+</a>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+
+<!-- Incoming Requests -->
+
+<div class="box">
+
+<h2>Incoming Requests</h2>
+
+{% for req in incoming %}
+
+<div class="request-box">
+
+{{ req[1] }} wants to swap  
+<br>
+
+{{ req[3] }} ↔ {{ req[4] }}
+
+<br>
+
+Status: {{ req[5] }}
+
+<br>
+
+<a href="/accept/{{ req[0] }}" class="accept-btn">Accept</a>
+<a href="/reject/{{ req[0] }}" class="reject-btn">Reject</a>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+
+<!-- Sent Requests -->
+
+<div class="box">
+
+<h2>Sent Requests</h2>
+
+{% for req in sent %}
+
+<div class="request-box">
+
+To {{ req[2] }}
+
+<br>
+
+{{ req[3] }} ↔ {{ req[4] }}
+
+<br>
+
+Status: {{ req[5] }}
+
+</div>
+
+{% endfor %}
+
+</div>
+
+
+<!-- Accepted -->
+
+<div class="box">
+
+<h2>Connections</h2>
+
+{% for acc in accepted %}
+
+<div class="swap-box">
+
+{% if acc[1] == session['username'] %}
+{{ acc[2] }}
+{% else %}
+{{ acc[1] }}
+{% endif %}
+
+<a href="/chat/{% if acc[1] == session['username'] %}{{ acc[2] }}{% else %}{{ acc[1] }}{% endif %}" 
+class="accept-btn">
+
+Chat
+
+</a>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+
+</div>
+
+</body>
+</html>

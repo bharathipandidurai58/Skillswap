@@ -1,0 +1,233 @@
+/* ================= BODY ================= */
+
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+margin: 0;
+padding: 0;
+background: linear-gradient(120deg, #89f7fe, #66a6ff);
+min-height: 100vh;
+}
+
+
+
+/* ================= CENTER BOX ================= */
+
+.center-box {
+width: 350px;
+margin: 120px auto;
+background: white;
+padding: 30px;
+border-radius: 15px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+text-align: center;
+}
+
+
+
+/* ================= INPUT ================= */
+
+input {
+padding: 10px;
+width: 80%;
+border-radius: 5px;
+border: 1px solid #ccc;
+}
+
+
+
+/* ================= BUTTON ================= */
+
+button {
+padding: 10px 15px;
+border: none;
+background: linear-gradient(45deg, #667eea, #764ba2);
+color: white;
+border-radius: 20px;
+cursor: pointer;
+}
+
+button:hover {
+opacity: 0.9;
+}
+
+
+
+/* ================= BIG BUTTON ================= */
+
+.big-btn{
+width: 220px;
+padding: 14px;
+font-size: 17px;
+font-weight: bold;
+border-radius: 25px;
+cursor: pointer;
+border:none;
+background: linear-gradient(45deg, #667eea, #764ba2);
+color:white;
+transition:0.3s;
+}
+
+.big-btn:hover{
+transform: scale(1.05);
+opacity:0.95;
+}
+
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+background: linear-gradient(45deg, #667eea, #764ba2);
+color: white;
+padding: 15px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+
+
+/* ================= LOGO ================= */
+
+.logo-section{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo{
+width:40px;
+height:40px;
+}
+
+
+
+/* ================= USER NAME ================= */
+
+.user-name{
+margin-right:15px;
+font-weight:bold;
+}
+
+
+
+/* ================= LOGOUT ================= */
+
+.logout-btn {
+background: #ff4757;
+color: white;
+padding: 8px 15px;
+border-radius: 20px;
+text-decoration: none;
+}
+
+
+
+/* ================= CONTAINER ================= */
+
+.container {
+width: 80%;
+margin: auto;
+margin-top: 20px;
+}
+
+
+
+/* ================= BOX ================= */
+
+.box {
+background: white;
+padding: 20px;
+margin-bottom: 20px;
+border-radius: 15px;
+box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.box:hover{
+transform:translateY(-3px);
+}
+
+
+
+/* ================= SKILL ================= */
+
+.skill-box {
+display: flex;
+justify-content: space-between;
+align-items:center;
+background: #f1f2f6;
+padding: 12px;
+margin-bottom: 10px;
+border-radius: 10px;
+}
+
+
+
+/* ================= BUTTONS ================= */
+
+.swap-btn {
+background: linear-gradient(45deg,#00b09b,#96c93d);
+color: white;
+padding: 6px 12px;
+border-radius: 20px;
+text-decoration: none;
+margin-right:5px;
+}
+
+.accept-btn {
+background: #2ed573;
+color: white;
+padding: 6px 12px;
+border-radius: 20px;
+text-decoration: none;
+}
+
+.reject-btn {
+background: #ff4757;
+color: white;
+padding: 6px 12px;
+border-radius: 20px;
+text-decoration: none;
+}
+
+.delete-btn {
+background: #ff4757;
+color: white;
+padding: 6px 12px;
+border-radius: 20px;
+text-decoration: none;
+}
+
+
+
+/* ================= REQUEST ================= */
+
+.request-box{
+background:#f1f2f6;
+padding:10px;
+margin-bottom:10px;
+border-radius:10px;
+}
+
+
+
+/* ================= SWAP ================= */
+
+.swap-box{
+background:#dfe4ea;
+padding:10px;
+margin-bottom:10px;
+border-radius:10px;
+}
+
+
+
+/* ================= CHAT ================= */
+
+.chat-box{
+background:#f1f2f6;
+padding:10px;
+margin-bottom:10px;
+border-radius:10px;
+}
